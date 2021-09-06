@@ -36,7 +36,7 @@ let mapleader="\<space>"
 nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
 
 "Share clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 "Theme
 colorscheme gruvbox
