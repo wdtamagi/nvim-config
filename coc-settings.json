@@ -1,0 +1,15 @@
+{
+  "codeLens.enable": true,
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "eslint.autoFixOnSave": true,
+  "eslint.format.enable": true,
+  "suggest.floatConfig": {
+    "border": true
+  },
+  "suggest.timeout": 5000,
+  "suggest.defaultSortMethod": "none",
+  "suggest.noselect": false,
+  "suggest.enablePreselect": true,
+  "typescript.autoClosingTags": true
+}
