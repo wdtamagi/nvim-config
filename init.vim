@@ -23,8 +23,6 @@ Plug 'ncm2/ncm2-racer'
 Plug 'ncm2/ncm2-ultisnips'
 
 Plug 'jiangmiao/auto-pairs'
-
-Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 "General
@@ -38,7 +36,7 @@ let mapleader="\<space>"
 nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
 
 "Share clipboard
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 "Theme
 colorscheme gruvbox
@@ -49,7 +47,7 @@ nnoremap <c-p> :Files<cr>
 nnoremap <c-f> :Ag<space>
 
 "Buffer
-nnoremap <leader>b :CtrlPBuffer<cr>
+nnoremap <c-b> :Buffers<cr>
 
 "Completion
 " enable ncm2 for all buffers
