@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/will/personal/challenges/superformula-challenge/src/components/Combobox'
+let g:netrw_dirhist_0='/home/will/personal/challenges/superformula-challenge/src/components'
+let g:netrw_dirhist_9='/home/will/personal/challenges/superformula-challenge/src'
+let g:netrw_dirhist_8='/home/will/personal/challenges/superformula-challenge/src/modules'
+let g:netrw_dirhist_7='/home/will/personal/challenges/superformula-challenge/src/modules/Main'
+let g:netrw_dirhist_6='/home/will/personal/challenges/superformula-challenge/src/modules/Main/components'
+let g:netrw_dirhist_5='/home/will/personal/challenges/superformula-challenge/src/modules/Main'
+let g:netrw_dirhist_4='/home/will/personal/challenges/superformula-challenge/src/modules'
+let g:netrw_dirhist_3='/home/will/personal/challenges/superformula-challenge/src'
+let g:netrw_dirhist_2='/home/will/personal/challenges/superformula-challenge/src/components'

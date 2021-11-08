@@ -11,5 +11,9 @@
   "suggest.defaultSortMethod": "none",
   "suggest.noselect": false,
   "suggest.enablePreselect": true,
-  "typescript.autoClosingTags": true
+  "typescript.autoClosingTags": true,
+  "javascript.autoClosingTags": true,
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
+  "svelte.enable-ts-plugin": true
 }

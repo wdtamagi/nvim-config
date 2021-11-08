@@ -1,7 +1,7 @@
 call plug#begin()
 Plug 'morhetz/gruvbox'
 
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 Plug 'sheerun/vim-polyglot'
 
@@ -11,16 +11,16 @@ Plug 'junegunn/fzf.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2-tmux'
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-cssomni'
-Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
-Plug 'ncm2/nvim-typescript', {'do': './install.sh'}
-Plug 'ncm2/ncm2-racer'
-Plug 'ncm2/ncm2-ultisnips'
+"Plug 'ncm2/ncm2'
+"Plug 'roxma/nvim-yarp'
+"Plug 'ncm2/ncm2-tmux'
+"Plug 'ncm2/ncm2-bufword'
+"Plug 'ncm2/ncm2-path'
+"Plug 'ncm2/ncm2-cssomni'
+"Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
+"Plug 'ncm2/nvim-typescript', {'do': './install.sh'}
+"Plug 'ncm2/ncm2-racer'
+"Plug 'ncm2/ncm2-ultisnips'
 
 Plug 'jiangmiao/auto-pairs'
 
@@ -30,12 +30,14 @@ Plug 'haya14busa/incsearch-fuzzy.vim'
 Plug 'haya14busa/incsearch-easymotion.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
 call plug#end()
 
 "General
 set hidden
 set number
-set mouse=a
 set inccommand=split
 
 "Leader key
@@ -57,14 +59,14 @@ nnoremap <c-f> :Ag<space>
 nnoremap <leader>b :Buffers<cr>
 
 "Explorer
-nnoremap <leader>e :Rex<cr>
-nnoremap <leader>v :Vex<cr>
+nnoremap <leader>e :Explore<cr>
+nnoremap <leader>v :Vexplore<cr>
 
 "Completion
 " enable ncm2 for all buffers
-autocmd BufEnter * call ncm2#enable_for_buffer()
-set completeopt=noinsert,menuone,noselect
-set shortmess+=c
+"autocmd BufEnter * call ncm2#enable_for_buffer()
+"set completeopt=noinsert,menuone,noselect
+"set shortmess+=c
 
 "Easymotion
 " <Leader>f{char} to move to {char}
@@ -179,7 +181,10 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+" Confirm auto import
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" Remap file types js to jsx
 " Extensions
 let g:coc_global_extensions = [
       \'coc-css',
@@ -195,6 +200,7 @@ let g:coc_global_extensions = [
       \'coc-prettier',
       \'coc-stylelintplus',
       \'coc-stylelint',
+      \'coc-styled-components',
       \'coc-snippets',
       \'coc-svelte',
       \'coc-svg',
