@@ -33,6 +33,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
+
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 "General
@@ -91,6 +95,21 @@ function! s:config_easyfuzzymotion(...) abort
   \ }), get(a:, 1, {}))
 endfunction
 noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
+
+
+"Fugitive
+"Git status
+nnoremap <leader>gs :G<cr>
+"Git commit
+nnoremap <leader>gc :Git commit<cr>
+"Git push
+nnoremap <leader>gp :Git push<cr>
+"Git fetch
+nnoremap <leader>gf :Git fetch<cr>
+"Git status
+nnoremap <leader>gl :diffget //2 | diffupdate<cr>
+"Git status
+nnoremap <leader>gr :diffget //3 | diffupdate<cr>
 
 "COC vim
 " Use tab for trigger completion with characters ahead and navigate.
@@ -210,3 +229,5 @@ let g:coc_global_extensions = [
 "Snippets
 let g:UltiSnipsEditSplit = 'vertical'
 let g:UltiSnipsSnippetsDir = '~/.config/nvim/UltiSnips'
+
+
