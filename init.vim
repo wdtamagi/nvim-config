@@ -107,9 +107,9 @@ nnoremap <leader>gp :Git push<cr>
 "Git fetch
 nnoremap <leader>gf :Git fetch<cr>
 "Git status
-nnoremap <leader>gl :diffget //2 | diffupdate<cr>
+nnoremap <leader>gl :diffget //2 \| diffupdate<cr>
 "Git status
-nnoremap <leader>gr :diffget //3 | diffupdate<cr>
+nnoremap <leader>gr :diffget //3 \| diffupdate<cr>
 
 "COC vim
 " Use tab for trigger completion with characters ahead and navigate.
